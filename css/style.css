@@ -1,0 +1,665 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project: Jason - Responsive Portfolio Template
+Version: 1.0
+Last change: 19/06/2017 [RELEASE]
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body and HTML
+	1.1. Body Typography
+	1.2. Body Responsive Typography
+	1.3. Body Paddings
+2. Navigation Bar
+	2.1. Navigation Bar Brand Logo
+	2.2. Navigation Bar Links
+	2.3. Navigation Bar Dropdown
+	2.4. Navigation Bar Toggle
+	2.5. Navigation Bar Responsive Style
+3. Header Section
+	3.1. Header Section Content
+	3.2. Header Section Responsive Style
+4. About Section
+	4.1. About Section Image
+	4.2. About Section Description
+	4.3. About Section (Secondary)
+	4.4. About Section Responsive Style
+5. Services Section
+	5.1. Services Section Image
+	5.2. Services Section Content
+	5.3. Services Section Callout
+	5.4. Services Section Responsive Style
+6. Portfolio Section
+	6.1. Portfolio Section Content
+	6.2. Portfolio Section Content (Images)
+7. Contact Section
+ 	7.1. Contact Section Form
+8. Footer Section
+	8.1. Footer Section Social Icons
+	8.2. Footer Section Copyright
+	8.3. Footer Section Responsive Style
+-------------------------------------------------------------------*/
+
+/* 1. Body and HTML */
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #404040;
+}
+
+/* 1.1. Body Typography */
+
+h1 { font-size: 48px; margin-bottom: 20px; }
+
+h2 { font-size: 36px; margin-bottom: 20px; }
+
+h3 { font-size: 25px; margin-bottom: 20px; }
+
+h4 { font-size: 19px; margin-bottom: 20px; }
+
+h5 { margin-bottom: 20px; }
+
+p { font-size: 16px; font-weight: 300; }
+
+
+/* 1.2. Body Responsive Typography */
+
+@media(max-width: 767px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 21px; }
+	h4 { font-size: 17px; }
+}
+
+/* 1.3. Body Paddings */
+
+@media(min-width: 768px) {
+	.pb-30 {
+		padding-bottom: 30px;
+	}
+}
+
+/* 2. Navigation Bar */
+
+/* UN-COLLAPSED STATE, THIS IS WHAT THE NAVBAR WILL LOOK LIKE AT THE TOP OF THE PAGE */
+
+.navbar-default {
+    background: transparent;
+    transition: all .35s;
+    padding: 15px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* COLLAPSED STATE, THIS IS WHAT THE NAVBAR WILL LOOK WHEN THE USER SCROLLS */
+
+@media(min-width: 768px) {
+    .navbar-default.affix {
+        padding: 5px 0;
+        background-color: #222222;
+        border: none;
+		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
+    }
+    .navbar-default.affix .nav > li > a,
+    .navbar-default.affix .nav > li > a:focus {
+        color: #CCCCCC;
+    }
+    .navbar-default.affix .navbar-nav > .active > a, 
+    .navbar-default.affix .navbar-nav > .active > a:hover, 
+    .navbar-default.affix .navbar-nav > .active > a:focus {
+        color: #FFFFFF;
+		font-weight: 500;
+    }
+    .navbar-default.affix .nav > li > a:hover,
+    .navbar-default.affix .nav > li > a:focus {
+        color: #FFFFFF;
+        border-bottom: none;
+    }
+}
+
+/* 2.1. Navigation Bar Brand Logo */
+
+.navbar-brand {
+	padding: 0px;
+}
+
+.navbar-brand > img {
+  	height: 100%;
+  	padding: 10px 0;
+  	width: auto;
+}
+
+/* 2.2. Navigation Bar Links */
+
+.nav > li > a {
+    padding-left: 30px;
+	padding-right: 30px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+	transition: color .10s;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #404040;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #FFFFFF;
+    background-color: transparent;
+	font-weight: 500;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555555;
+    background-color: #D5D5D5;
+}
+
+/* 2.3. Navigation Bar Dropdown */
+
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #777777;
+    border-bottom-color: #777777;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333333;
+    border-bottom-color: #333333;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #555555;
+    border-bottom-color: #555555;
+}
+
+/* 2.4. Navigation Bar Toggle */
+
+.navbar-default .navbar-toggle {
+    border-color: #DDDDDD;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+/* 2.5. Navigation Bar Responsive Style */
+
+@media (max-width: 767px) {
+	.navbar-default {
+		box-shadow: none;
+        background-color: transparent;
+	}
+	.navbar-brand {
+		padding: 0 0 0 10px;
+	}
+	.nav > li > a {
+		padding: 10px 15px;
+	}
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #777777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+          color: #333333;
+    }
+	.navbar-default .navbar-collapse {
+		border: none;
+	}
+	
+	.navbar-default.affix {
+        padding: 5px 0;
+        background-color: #222222;
+        border: none;
+		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
+    }
+}
+
+/* 3. Header Section */
+
+.header-section {
+	background: url(http://via.placeholder.com/1500x795?text=Image) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/*background: #24C6DC;  /* fallback for old browsers */
+	/*background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+	/*background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+/* 3.1. Header Section Content */
+
+.header-section .header-section-content {
+	color: #FFFFFF;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.header-section .header-section-content h1 {
+	font-weight: 300;
+	margin-top: 0;
+}
+
+.header-section .header-section-content p {
+	margin-bottom: 0;
+}
+
+/* 3.2. Header Section Responsive Style */
+
+@media (max-width: 767px) {
+	.header-section .header-section-content p {
+		line-height: 25px;
+		width: 100%;
+	}
+}
+
+/* 4. About Section */
+
+.about-section {
+	padding: 80px 0;
+	background: #FFFFFF;
+}
+
+/* 4.1. About Section Image */
+
+.about-section img {
+	border-color: white;
+  	border-width: 15px;
+  	-moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  	border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+  	border-style: solid;
+  	margin: auto;
+}
+
+/* 4.2. About Section Description */
+
+.about-section .about-description {
+	margin-top: 50px;
+}
+
+.about-section .about-description .section-title h1 {
+	margin-top: 0;
+	font-weight: 100;
+	font-size: 40px;
+}
+
+.about-section .about-description p {
+	font-weight: 400;
+	line-height: 28px;
+	margin-bottom: 20px;
+}
+
+.about-section .about-description .about-description-skills {
+	color: #999999;
+}
+
+.about-section .about-description .about-description-skills h4 {
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-top: 0;
+}
+
+.about-section .about-description .about-description-skills p {
+	text-transform: none;
+}
+
+.about-section .about-description .about-description-skills ul {
+	margin-bottom: 0;
+}
+
+.about-section .about-description .about-description-skills li {
+	font-size: 16px;
+	line-height: 28px;
+}
+
+/* 4.3. About Section (Secondary) */
+
+.about-section-secondary {
+	background: #F8F8F8;
+	padding-top: 0;
+}
+
+.about-section-secondary .section-title h1 {
+	padding: 80px 0;
+	margin: 0;
+	font-weight: 100;
+	font-size: 40px;
+	text-align: center;
+}
+
+.about-section-secondary h4 {
+	margin-top: 0;
+}
+
+.about-section-secondary h5 {
+	margin-top: 0;
+}
+
+.about-section-secondary p {
+	font-weight: 400;
+	line-height: 28px;
+	margin-bottom: 30px;
+}
+
+.about-section-secondary .mb-0 p {
+	margin-bottom: 0;
+}
+
+/* 4.4. About Section Responsive Style */
+
+/* PRIMARY SECTION */
+
+@media (max-width: 1200px) {
+	.about-section .about-description {
+		text-align: center;
+		margin-top: 0;
+	}
+	.about-section .about-description .section-title h1 {
+		padding: 0 0 80px 0;
+		margin: 0;
+	}
+}
+
+/* SECONDARY SECTION */
+
+@media (max-width: 1200px) {
+	.about-section-secondary {
+		text-align: center;
+	}
+	.about-section-secondary .mb-20 p {
+		margin-bottom: 20px;
+	}
+}
+
+/* 5. Services Section */
+
+.services-section {
+	background: #FFFFFF;
+	padding-bottom: 80px;
+}
+
+.services-section .section-title h1 {
+	padding: 80px 0;
+	margin: 0;
+	font-weight: 100;
+	font-size: 40px;
+	text-align: center;
+}
+
+/* 5.1. Services Section Image */
+
+.services-section .services-section-image {
+	text-align: left;
+}
+
+/* 5.2. Services Section Content */
+
+.services-section h4 {
+	margin-top: 20px;
+}
+
+.services-section p {
+	margin-bottom: 0;
+}
+
+/* 5.3. Services Section Callout */
+
+.services-section-callout {
+	background: royalblue;
+	color: #FFFFFF;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.services-section-callout h1 {
+	margin: 0;
+	padding: 50px 0;
+	font-weight: 100;
+	font-size: 40px;
+}
+
+.services-section-callout button {
+	padding: 10px 35px;
+	background-color: transparent;
+	color: #FFFFFF;
+	transition: all .15s;
+}
+
+.services-section-callout button:hover,
+.services-section-callout button:active,
+.services-section-callout button:focus {
+	background-color: #FFFFFF;
+	border-color: transparent;
+	color: #404040;
+}
+
+.services-section-callout button a:hover {
+	text-decoration: none;
+	color: #404040;
+}
+
+/* 5.4. Services Section Responsive Style */
+
+@media (max-width: 1200px) {
+	.services-section .services-section-image img {
+		margin: 0 auto;
+	}
+	.services-section {
+		text-align: center;
+	}
+	.services-section p {
+		margin-bottom: 20px;
+	}
+	.services-section .mb-0 p {
+		margin-bottom: 0;
+	}
+}
+
+/* 6. Portfolio Section */
+
+.portfolio-section {
+	background: #F8F8F8;
+	padding-bottom: 80px;
+}
+
+.portfolio-section .section-title h1 {
+	padding: 80px 0;
+	margin: 0;
+	font-weight: 100;
+	font-size: 40px;
+	text-align: center;
+}
+
+/* 6.1. Portfolio Section Content */
+
+.portfolio-section .no-padding {
+	padding: 0;
+}
+
+/* 6.2. Portfolio Section Content (Images) */
+
+.portfolio-section .image-wrapper .image-overlay-text {
+	visibility:hidden;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+	margin: 0;
+	font-weight: 400;
+	text-align: center;
+}
+
+.portfolio-section .image-wrapper .image-overlay-text h3 {
+	margin-top: 0;
+}
+
+.portfolio-section .image-wrapper .image-overlay-text p {
+	margin: 0;
+	font-weight: 300;
+	color: #999999;
+}
+
+.portfolio-section .image-wrapper:hover .image-overlay-text {
+	visibility: visible;
+}
+
+.portfolio-section .image-wrapper .image-overlay {
+  	position: absolute;
+  	top: 0;
+  	bottom: 10%;
+  	left: 0;
+  	right: 0;
+  	height: 100%;
+  	width: 100%;
+  	opacity: 0;
+  	transition: .5s ease;
+  	background-color: #FFFFFF;
+}
+
+.portfolio-section .image-wrapper:hover .image-overlay {
+  	opacity: 1;
+}
+
+/* 6.3. Portfolio Section Responsive Style */
+
+
+
+/* 7. Contact Section */
+
+.contact-section {
+	background: #FFFFFF;
+	padding-bottom: 80px;
+}
+
+.contact-section .section-title h1 {
+	padding: 80px 0;
+	margin: 0;
+	font-weight: 100;
+	font-size: 40px;
+	text-align: center;
+	background: transparent;
+}
+
+/* 7.1. Contact Section Form */
+
+.contact-section .form-group {
+    margin-bottom: 30px;
+}
+
+.contact-section .custom-height {
+	height: 50px;
+}
+
+.contact-section .form-control {
+    box-shadow: none !important;
+}
+
+.contact-section .form-control:focus {
+    border-color: royalblue;
+    box-shadow: 0 0 5px rgba(44, 151, 222, 0.2);
+    outline: none;
+}
+
+.contact-section button {
+	padding: 10px 35px;
+	background-color: royalblue;
+	color: #FFFFFF;
+	transition: all .15s;
+	border-color: transparent;
+	margin: 30px 0 0 0;
+}
+
+.contact-section button:hover,
+.contact-section button:active,
+.contact-section button:focus {
+	background-color: #FFFFFF;
+	color: #555555;
+	border-color: royalblue;
+}
+
+/* 8. Footer Section */
+
+.footer-section {
+	background: #111111;
+	text-align: center;
+}
+
+/* 8.1. Footer Section Social Icons */
+
+.footer-section .social-icons .icon-container {
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 50px 0;
+}
+
+.footer-section .social-icons .icon-container:last-child {
+	border-right: none;
+}
+
+.footer-section .social-icons .icon-container:hover {
+	background: #282828;
+	cursor: pointer;
+	transition: all .35s;
+}
+
+.footer-section .social-icons .icon-container a {
+	font-size: 36px;
+	color: #585858;
+}
+
+.footer-section .social-icons .icon-container ul {
+    margin: 0;
+}
+
+.footer-section .social-icons .facebook:hover { color: #3b5998; }
+.footer-section .social-icons .twitter:hover { color: #00b6f1; }
+.footer-section .social-icons .google:hover { color: #df4a32; }
+.footer-section .social-icons .instagram:hover { color: #c32aa3; }
+
+/* 8.2. Footer Section Copyright */
+
+.footer-section .copyright {
+	color: #FFFFFF;
+	padding: 30px 0;
+}
+
+.footer-section .copyright p {
+	margin: 0;
+	font-weight: 300;
+}
+
+.footer-section .copyright .heart {
+	color: #e31b23;
+}
+
+/* 8.3. Footer Section Responsive Style */
+
+@media (max-width: 767px) {
+	.footer-section .social-icons .icon-container {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	}
+	.footer-section .social-icons .icon-container:last-child {
+		border: none;
+	}
+}
