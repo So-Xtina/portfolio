@@ -231,7 +231,7 @@ p { font-size: 16px; font-weight: 300; }
 /* 3. Header Section */
 
 .header-section {
-	background: url(http://via.placeholder.com/1500x795?text=Image) no-repeat center center fixed; 
+	background: url("../img/architecture-buildings-city-533930.jpg") no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
