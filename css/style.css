@@ -45,43 +45,68 @@ Last change: 19/06/2017 [RELEASE]
 
 /* 1. Body and HTML */
 
-html, body {
+html,
+body {
 	height: 100%;
 	width: 100%;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	color: #404040;
 }
 
 /* 1.1. Body Typography */
 
-h1 { font-size: 48px; margin-bottom: 20px; }
+h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
 
-h2 { font-size: 36px; margin-bottom: 20px; }
+h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
 
-h3 { font-size: 25px; margin-bottom: 20px; }
+h3 {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
 
-h4 { font-size: 19px; margin-bottom: 20px; }
+h4 {
+	font-size: 19px;
+	margin-bottom: 20px;
+}
 
-h5 { margin-bottom: 20px; }
+h5 {
+	margin-bottom: 20px;
+}
 
-p { font-size: 16px; font-weight: 300; }
-
+p {
+	font-size: 16px;
+	font-weight: 300;
+}
 
 /* 1.2. Body Responsive Typography */
 
-@media(max-width: 767px) {
-    h1 { font-size: 32px; }
-    h2 { font-size: 26px; }
-    h3 { font-size: 21px; }
-	h4 { font-size: 17px; }
+@media (max-width: 767px) {
+	h1 {
+		font-size: 32px;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	h3 {
+		font-size: 21px;
+	}
+	h4 {
+		font-size: 17px;
+	}
 }
 
 /* 1.3. Body Paddings */
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
 	.pb-30 {
 		padding-bottom: 30px;
 	}
@@ -92,36 +117,36 @@ p { font-size: 16px; font-weight: 300; }
 /* UN-COLLAPSED STATE, THIS IS WHAT THE NAVBAR WILL LOOK LIKE AT THE TOP OF THE PAGE */
 
 .navbar-default {
-    background: transparent;
-    transition: all .35s;
-    padding: 15px 0;
+	background: transparent;
+	transition: all 0.35s;
+	padding: 15px 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* COLLAPSED STATE, THIS IS WHAT THE NAVBAR WILL LOOK WHEN THE USER SCROLLS */
 
-@media(min-width: 768px) {
-    .navbar-default.affix {
-        padding: 5px 0;
-        background-color: #222222;
-        border: none;
-		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
-    }
-    .navbar-default.affix .nav > li > a,
-    .navbar-default.affix .nav > li > a:focus {
-        color: #CCCCCC;
-    }
-    .navbar-default.affix .navbar-nav > .active > a, 
-    .navbar-default.affix .navbar-nav > .active > a:hover, 
-    .navbar-default.affix .navbar-nav > .active > a:focus {
-        color: #FFFFFF;
+@media (min-width: 768px) {
+	.navbar-default.affix {
+		padding: 5px 0;
+		background-color: #222222;
+		border: none;
+		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.3);
+	}
+	.navbar-default.affix .nav > li > a,
+	.navbar-default.affix .nav > li > a:focus {
+		color: #cccccc;
+	}
+	.navbar-default.affix .navbar-nav > .active > a,
+	.navbar-default.affix .navbar-nav > .active > a:hover,
+	.navbar-default.affix .navbar-nav > .active > a:focus {
+		color: #ffffff;
 		font-weight: 500;
-    }
-    .navbar-default.affix .nav > li > a:hover,
-    .navbar-default.affix .nav > li > a:focus {
-        color: #FFFFFF;
-        border-bottom: none;
-    }
+	}
+	.navbar-default.affix .nav > li > a:hover,
+	.navbar-default.affix .nav > li > a:focus {
+		color: #ffffff;
+		border-bottom: none;
+	}
 }
 
 /* 2.1. Navigation Bar Brand Logo */
@@ -131,69 +156,69 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 .navbar-brand > img {
-  	height: 100%;
-  	padding: 10px 0;
-  	width: auto;
+	height: 100%;
+	padding: 10px 0;
+	width: auto;
 }
 
 /* 2.2. Navigation Bar Links */
 
 .nav > li > a {
-    padding-left: 30px;
+	padding-left: 30px;
 	padding-right: 30px;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #FFFFFF;
-	transition: color .10s;
+	color: #ffffff;
+	transition: color 0.1s;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #404040;
+	color: #404040;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #FFFFFF;
-    background-color: transparent;
+	color: #ffffff;
+	background-color: transparent;
 	font-weight: 500;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-    color: #555555;
-    background-color: #D5D5D5;
+	color: #555555;
+	background-color: #d5d5d5;
 }
 
 /* 2.3. Navigation Bar Dropdown */
 
 .navbar-default .navbar-nav > .dropdown > a .caret {
-    border-top-color: #777777;
-    border-bottom-color: #777777;
+	border-top-color: #777777;
+	border-bottom-color: #777777;
 }
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: #333333;
-    border-bottom-color: #333333;
+	border-top-color: #333333;
+	border-bottom-color: #333333;
 }
 .navbar-default .navbar-nav > .open > a .caret,
 .navbar-default .navbar-nav > .open > a:hover .caret,
 .navbar-default .navbar-nav > .open > a:focus .caret {
-    border-top-color: #555555;
-    border-bottom-color: #555555;
+	border-top-color: #555555;
+	border-bottom-color: #555555;
 }
 
 /* 2.4. Navigation Bar Toggle */
 
 .navbar-default .navbar-toggle {
-    border-color: #DDDDDD;
+	border-color: #dddddd;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: transparent;
+	background-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #FFF;
+	background-color: #fff;
 }
 
 /* 2.5. Navigation Bar Responsive Style */
@@ -201,7 +226,7 @@ p { font-size: 16px; font-weight: 300; }
 @media (max-width: 767px) {
 	.navbar-default {
 		box-shadow: none;
-        background-color: transparent;
+		background-color: transparent;
 	}
 	.navbar-brand {
 		padding: 0 0 0 10px;
@@ -209,29 +234,29 @@ p { font-size: 16px; font-weight: 300; }
 	.nav > li > a {
 		padding: 10px 15px;
 	}
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: #777777;
-    }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-          color: #333333;
-    }
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #777777;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #333333;
+	}
 	.navbar-default .navbar-collapse {
 		border: none;
 	}
-	
+
 	.navbar-default.affix {
-        padding: 5px 0;
-        background-color: #222222;
-        border: none;
-		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
-    }
+		padding: 5px 0;
+		background-color: #222222;
+		border: none;
+		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.3);
+	}
 }
 
 /* 3. Header Section */
 
 .header-section {
-	background: url("../img/architecture-buildings-city-533930.jpg") no-repeat center center fixed; 
+	background: url("../img/architecture-buildings-city-533930.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -247,11 +272,11 @@ p { font-size: 16px; font-weight: 300; }
 /* 3.1. Header Section Content */
 
 .header-section .header-section-content {
-	color: #FFFFFF;
+	color: #ffffff;
 	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	text-align: center;
 }
 
@@ -262,6 +287,17 @@ p { font-size: 16px; font-weight: 300; }
 
 .header-section .header-section-content p {
 	margin-bottom: 0;
+}
+
+/* links */
+.links {
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px;
+}
+
+.links a {
+	color: #ffffff;
 }
 
 /* 3.2. Header Section Responsive Style */
@@ -277,18 +313,18 @@ p { font-size: 16px; font-weight: 300; }
 
 .about-section {
 	padding: 80px 0;
-	background: #FFFFFF;
+	background: #ffffff;
 }
 
 /* 4.1. About Section Image */
 
 .about-section img {
 	border-color: white;
-  	border-width: 15px;
-  	-moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
-  	border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
-  	border-style: solid;
-  	margin: auto;
+	border-width: 15px;
+	-moz-border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+	border-image: url(http://tobias-reinhardt.de/img/frame.png) 15 stretch;
+	border-style: solid;
+	margin: auto;
 }
 
 /* 4.2. About Section Description */
@@ -335,7 +371,7 @@ p { font-size: 16px; font-weight: 300; }
 /* 4.3. About Section (Secondary) */
 
 .about-section-secondary {
-	background: #F8F8F8;
+	background: #f8f8f8;
 	padding-top: 0;
 }
 
@@ -394,7 +430,8 @@ p { font-size: 16px; font-weight: 300; }
 /* 5. Services Section */
 
 .services-section {
-	background: #FFFFFF;
+	/* background: #FFFFFF; */
+	background: #f8f8f8;
 	padding-bottom: 80px;
 }
 
@@ -409,7 +446,8 @@ p { font-size: 16px; font-weight: 300; }
 /* 5.1. Services Section Image */
 
 .services-section .services-section-image {
-	text-align: left;
+	/* text-align: left; */
+	text-align: center;
 }
 
 /* 5.2. Services Section Content */
@@ -426,7 +464,7 @@ p { font-size: 16px; font-weight: 300; }
 
 .services-section-callout {
 	background: royalblue;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding-bottom: 50px;
 	text-align: center;
 }
@@ -441,14 +479,14 @@ p { font-size: 16px; font-weight: 300; }
 .services-section-callout button {
 	padding: 10px 35px;
 	background-color: transparent;
-	color: #FFFFFF;
-	transition: all .15s;
+	color: #ffffff;
+	transition: all 0.15s;
 }
 
 .services-section-callout button:hover,
 .services-section-callout button:active,
 .services-section-callout button:focus {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	border-color: transparent;
 	color: #404040;
 }
@@ -478,7 +516,7 @@ p { font-size: 16px; font-weight: 300; }
 /* 6. Portfolio Section */
 
 .portfolio-section {
-	background: #F8F8F8;
+	background: #f8f8f8;
 	padding-bottom: 80px;
 }
 
@@ -499,12 +537,12 @@ p { font-size: 16px; font-weight: 300; }
 /* 6.2. Portfolio Section Content (Images) */
 
 .portfolio-section .image-wrapper .image-overlay-text {
-	visibility:hidden;
-  	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-  	-ms-transform: translate(-50%, -50%);
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 	margin: 0;
 	font-weight: 400;
 	text-align: center;
@@ -525,30 +563,28 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 .portfolio-section .image-wrapper .image-overlay {
-  	position: absolute;
-  	top: 0;
-  	bottom: 10%;
-  	left: 0;
-  	right: 0;
-  	height: 100%;
-  	width: 100%;
-  	opacity: 0;
-  	transition: .5s ease;
-  	background-color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.5s ease;
+	background-color: #ffffff;
 }
 
 .portfolio-section .image-wrapper:hover .image-overlay {
-  	opacity: 1;
+	opacity: 1;
 }
 
 /* 6.3. Portfolio Section Responsive Style */
 
-
-
 /* 7. Contact Section */
 
 .contact-section {
-	background: #FFFFFF;
+	background: #ffffff;
 	padding-bottom: 80px;
 }
 
@@ -564,7 +600,7 @@ p { font-size: 16px; font-weight: 300; }
 /* 7.1. Contact Section Form */
 
 .contact-section .form-group {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .contact-section .custom-height {
@@ -572,20 +608,20 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 .contact-section .form-control {
-    box-shadow: none !important;
+	box-shadow: none !important;
 }
 
 .contact-section .form-control:focus {
-    border-color: royalblue;
-    box-shadow: 0 0 5px rgba(44, 151, 222, 0.2);
-    outline: none;
+	border-color: royalblue;
+	box-shadow: 0 0 5px rgba(44, 151, 222, 0.2);
+	outline: none;
 }
 
 .contact-section button {
 	padding: 10px 35px;
 	background-color: royalblue;
-	color: #FFFFFF;
-	transition: all .15s;
+	color: #ffffff;
+	transition: all 0.15s;
 	border-color: transparent;
 	margin: 30px 0 0 0;
 }
@@ -593,7 +629,7 @@ p { font-size: 16px; font-weight: 300; }
 .contact-section button:hover,
 .contact-section button:active,
 .contact-section button:focus {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 	color: #555555;
 	border-color: royalblue;
 }
@@ -620,7 +656,7 @@ p { font-size: 16px; font-weight: 300; }
 .footer-section .social-icons .icon-container:hover {
 	background: #282828;
 	cursor: pointer;
-	transition: all .35s;
+	transition: all 0.35s;
 }
 
 .footer-section .social-icons .icon-container a {
@@ -629,18 +665,26 @@ p { font-size: 16px; font-weight: 300; }
 }
 
 .footer-section .social-icons .icon-container ul {
-    margin: 0;
+	margin: 0;
 }
 
-.footer-section .social-icons .facebook:hover { color: #3b5998; }
-.footer-section .social-icons .twitter:hover { color: #00b6f1; }
-.footer-section .social-icons .google:hover { color: #df4a32; }
-.footer-section .social-icons .instagram:hover { color: #c32aa3; }
+.footer-section .social-icons .facebook:hover {
+	color: #3b5998;
+}
+.footer-section .social-icons .twitter:hover {
+	color: #00b6f1;
+}
+.footer-section .social-icons .google:hover {
+	color: #df4a32;
+}
+.footer-section .social-icons .instagram:hover {
+	color: #c32aa3;
+}
 
 /* 8.2. Footer Section Copyright */
 
 .footer-section .copyright {
-	color: #FFFFFF;
+	color: #ffffff;
 	padding: 30px 0;
 }
 
