@@ -652,6 +652,12 @@ p {
 	border-color: royalblue;
 }
 
+.messageTxt {
+	color: red;
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
 /* 8. Footer Section */
 
 .footer-section {
