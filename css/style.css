@@ -161,6 +161,12 @@ p {
 	width: auto;
 }
 
+.nameLogo {
+	padding: 12px 0;
+	color: #ffffff;
+	font-weight: 400;
+}
+
 /* 2.2. Navigation Bar Links */
 
 .nav > li > a {
@@ -289,6 +295,11 @@ p {
 	margin-bottom: 0;
 }
 
+.header-section-content h1,
+.header-section-content p {
+	text-shadow: 2px 2px #000000a6;
+}
+
 /* links */
 .links {
 	width: 10%;
@@ -299,6 +310,7 @@ p {
 .links img {
 	-webkit-filter: invert(100%); /* Safari/Chrome */
 	filter: invert(100%);
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 /* 3.2. Header Section Responsive Style */
@@ -328,6 +340,9 @@ p {
 	margin: auto;
 }
 
+.christinaImg {
+	max-width: 70%;
+}
 /* 4.2. About Section Description */
 
 .about-section .about-description {
